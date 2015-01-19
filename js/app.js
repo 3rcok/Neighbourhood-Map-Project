@@ -60,7 +60,7 @@ function VenuesModel() {
   //Observable for number of list unread
   self.num_unread = ko.observable(0);
   //Observable to store boolean variable for if the list is shown or not
-  self.show = ko.observable(true);
+  self.if_shown = ko.observable(false);
 
   //request popular venues from FOURSQAURE
   self.addvenuesModel = function() {
@@ -89,6 +89,7 @@ function VenuesModel() {
           }
         });
       }
+
       self.num_unread(self.venuesModel().length);
 
       map.setCenter(bounds.getCenter());
@@ -132,7 +133,7 @@ function initialize() {
   map.controls[google.maps.ControlPosition.TOP_LEFT].push($('#setting')[0]);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push($('#searchBox')[0]);
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push($('#list_button')[0]);
-  map.controls[google.maps.ControlPosition.RIGHT_TOP].push($('#place_list')[0]);
+  map.controls[google.maps.ControlPosition.RIGHT_TOP].push($('#popular_places')[0]);
   
   // Try W3C Geolocation (Preferred)
   if(navigator.geolocation) {
