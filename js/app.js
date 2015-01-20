@@ -177,7 +177,7 @@ function initialize() {
 
   $('#setting').popover({
     title: "Location Setting",
-    content: "<input id='loc_input' type='text' size='35' placeholder='Location like Toronto'>",
+    content: "<input id='loc_input' type='text' placeholder='Location like Toronto'>",
     html: true,
     placement: "bottom"
   });

@@ -32,5 +32,14 @@ html, body, #map-canvas {
 }
 
 #list_button {
-	
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.popover {
+	width: 30%;
+}
+
+#loc_input {
+	width: 100%;
 }
